@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class
+        class tv{
+            constructor(brand,color,size){
+                this.company=brand,
+                this.color=color,
+                this.size=size
+            }
+            details(){
+                return (`the brand is ${this.company} colour is ${this.color} and size is ${this.size}`)
+            }
+        }
+        let tv1=new tv("sony","black","70inches")
+        console.log(tv1.details())
+
+        //super
+        class birds{
+            constructor(name){
+                this.name=name;
+            }
+            speak(){
+                return `${this.name} fly`;
+            }
+        }
+        
+        
+        class hummingbird extends birds{
+            constructor(name,color){
+                super(name);
+                this.color=color;
+
+            }
+            speak(){
+                return (`${this.name},${this.color} color has long beak`)
+            }
+        }
+        const  bird=new hummingbird("goofy","blue")
+        console.log(bird.speak())
+        
+    </script>
+    
+</body>
+</html>
